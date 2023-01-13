@@ -1,6 +1,5 @@
 <template>
   <div class="job-list">
-    <h1 class="heading">Job List</h1>
     <i>Ordered by {{ order }}</i>
     <ul>
       <li v-for="job in orderedJobs" :key="job.id">
