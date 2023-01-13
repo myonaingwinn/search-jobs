@@ -2,5 +2,10 @@ body {
 	background: #d9e7f3;
 }
 
+@font-face {
+	font-family: HyliaSerif;
+	src: url("../fonts/HyliaSerif.ttf") format("opentype");
+}
+
 @import "./JobList";
 @import "./App";

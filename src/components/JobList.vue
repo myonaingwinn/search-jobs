@@ -1,6 +1,6 @@
 <template>
   <div class="job-list">
-    <h1>Job List</h1>
+    <h1 class="heading">Job List</h1>
     <i>Ordered by {{ order }}</i>
     <ul>
       <li v-for="job in orderedJobs" :key="job.id">
@@ -39,9 +39,7 @@ export default defineComponent({
   setup(props) {
     const orderedJobs = computed(() => {
       return [...props.jobs].sort((a: Job, b: Job) => {
-        if (a[props.order] === "salary" && b[props.order] === "salary")
-          return a[props.order] < b[props.order] ? -1 : 1;
-        else return a[props.order] > b[props.order] ? 1 : -1;
+        return a[props.order] > b[props.order] ? 1 : -1;
       });
     });
 
